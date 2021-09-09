@@ -14,11 +14,10 @@ organizations:
     url: https://www.vinai.io/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Physical 3D Scene Understanding and Reasoning.
+bio: My research interests include Visual Reasoning and Efficient Deep Learning.
 
 # Interests to show in About widget
 interests:
-  - Physical 3D Scene Understanding
   - Visual Reasoning
   - Efficient Deep Learning
 
@@ -31,7 +30,7 @@ education:
     #- course: MEng in Artificial Intelligence
     #  institution: Massachusetts Institute of Technology
     #  year: 2009
-    - course: BEng in Computer Science
+    - course: B.Eng. in Computer Science
       institution: Ho Chi Minh City University of Technology
       year: 2020
 
@@ -55,6 +54,9 @@ social:
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/lehduong
+  - icon: cv
+    icon_pack: ai
+    link: media/resume.pdf
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`,

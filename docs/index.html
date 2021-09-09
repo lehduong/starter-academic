@@ -255,6 +255,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLCW1MKBVS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-QLCW1MKBVS', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
   
@@ -511,36 +550,6 @@
         
         
 
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/media/resume.pdf"><span>Resume</span></a>
-        </li>
-
-        
-        
-
       
 
         
@@ -792,6 +801,21 @@
           </a>
         </li>
         
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="/media/resume.pdf"  aria-label="cv">
+            <i class="ai ai-cv big-icon"></i>
+          </a>
+        </li>
+        
       </ul>
 
     </div>
@@ -814,8 +838,6 @@
         <div class="section-subheading">Interests</div>
         <ul class="ul-interests mb-0">
           
-          <li>Physical 3D Scene Understanding</li>
-          
           <li>Visual Reasoning</li>
           
           <li>Efficient Deep Learning</li>
@@ -832,7 +854,7 @@
           <li>
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
-              <p class="course">BEng in Computer Science, 2020</p>
+              <p class="course">B.Eng. in Computer Science, 2020</p>
               <p class="institution">Ho Chi Minh City University of Technology</p>
             </div>
           </li>
